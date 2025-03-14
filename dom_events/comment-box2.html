@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comment Box Example</title>
+  <style>
+    #displayArea {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+    }
+    .comment {
+      margin-bottom: 10px;
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Leave a Comment</h2>
+  <textarea id="commentBox" rows="4" cols="50" placeholder="Enter your comment here..."></textarea>
+  <br>
+  <button id="submitComment">Submit Comment</button>
+  
+  <div id="displayArea">
+    <h3>Comments:</h3>
+  </div>
+  
+  <script>
+    // When the button is clicked, the comment is retrieved and displayed.
+    document.getElementById("submitComment").addEventListener("click", function() {
+      // Get the comment text from the textarea
+      const commentText = document.getElementById("commentBox").value.trim();
+      
+      // Only proceed if there is text entered
+      if(commentText !== "") {
+        // Create a new paragraph element for the comment
+        const commentPara = document.createElement("p");
+        commentPara.classList.add("comment");
+        commentPara.innerText = commentText;
+        
+        // Append the new comment to the display area
+        document.getElementById("displayArea").appendChild(commentPara);
+        
+        // Optionally, clear the textarea after submitting
+        document.getElementById("commentBox").value = "";
+      } else {
+        alert("Please enter a comment before submitting.");
+      }
+    });
+  </script>
+</body>
+</html>
