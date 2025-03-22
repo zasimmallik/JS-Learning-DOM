@@ -1,0 +1,11 @@
+{
+    "editor.accessibilityPageSize": 20,
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 20,
+    "editor.minimap.enabled": true,
+    "editor.minimap.autohide": true,
+    "editor.guides.bracketPairs": "active",
+    "code-runner.runInTerminal": true,
+    "editor.minimap.scale": 3
+}
